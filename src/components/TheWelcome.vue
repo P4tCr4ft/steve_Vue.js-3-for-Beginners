@@ -43,7 +43,8 @@ import SocialPost from './molecules/SocialPost.vue'
     <br />
 
     More instructions are available in
-    <a href="javascript:void(0)" @click="openReadmeInEditor"><code>README.md</code></a
+    <!-- <a href="javascript:void(0)" @click="openReadmeInEditor"><code>README.md</code></a -->
+    <a href="javascript:void(0)"><code>README.md</code></a
     >.
   </WelcomeItem>
 
