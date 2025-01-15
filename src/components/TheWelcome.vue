@@ -9,7 +9,7 @@ import SocialPost from './molecules/SocialPost.vue'
 </script>
 
 <template>
-  <SocialPost></SocialPost>
+  <SocialPost username="user 1" userId="UserID1" post="This is post by user 1"></SocialPost>
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />

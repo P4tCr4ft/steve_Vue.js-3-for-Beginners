@@ -2,14 +2,21 @@
   <div class="SocialPost">
     <div class="header">
       <img class="avatar" src="https://i.pravatar.cc/40" />
-      <div class="name">Name of User</div>
-      <div class="userId">@userId</div>
+      <div class="name">{{ username }}</div>
+      <div class="userId">{{ userId }}</div>
     </div>
-    <div class="post">This is a dummy post</div>
+    <div class="post">{{ post }}</div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps({
+  username: String,
+  userId: String,
+  avatarSrc: String,
+  post: String,
+})
+</script>
 
 <style lang="scss">
 .SocialPost {
