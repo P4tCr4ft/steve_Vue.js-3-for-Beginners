@@ -1,5 +1,5 @@
 <template>
-  <div class="SocialPost">
+  <div class="SocialPost" :class="{ SocialPost__selected: selected }" @click="selected = !selected">
     <div class="header">
       <img class="avatar" src="https://i.pravatar.cc/40" />
       <div class="name">{{ username }}</div>
@@ -10,6 +10,8 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
+const selected = ref(false)
 const props = defineProps({
   username: String,
   userId: String,
@@ -20,6 +22,9 @@ const props = defineProps({
 
 <style lang="scss">
 .SocialPost {
+  &__selected {
+    border: white solid 1px;
+  }
   .header {
     display: flex;
     align-items: center;
