@@ -21,7 +21,10 @@ import TheFooter from './components/TheFooter.vue'
   <RouterView />
 
   <footer>
-    <TheFooter></TheFooter>
+    <TheFooter
+      aboutUs="About Us Link coming ..."
+      contactUs="Contact Us Link coming ..."
+    ></TheFooter>
   </footer>
 </template>
 
