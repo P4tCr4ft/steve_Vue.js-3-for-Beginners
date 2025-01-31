@@ -1,7 +1,6 @@
 <template>
   <div class="SocialPost" :class="{ SocialPost__selected: selected }" @click="selected = !selected">
     <div class="header">
-      <!-- <img class="avatar" src="https://i.pravatar.cc/40" /> -->
       <img class="avatar" :src="avatarSrc" />
       <div class="name">{{ username }}</div>
       <div class="userId">{{ userId }}</div>

@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import TheFooter from './components/TheFooter.vue'
-</script>
-
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -21,12 +15,22 @@ import TheFooter from './components/TheFooter.vue'
   <RouterView />
 
   <footer>
-    <TheFooter
-      aboutUs="About Us Link coming ..."
-      contactUs="Contact Us Link coming ..."
-    ></TheFooter>
+    <TheFooter :aboutUs="footerInfo[0].aboutUs" :contactUs="footerInfo[0].contactUs"></TheFooter>
   </footer>
 </template>
+
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
+import TheFooter from './components/TheFooter.vue'
+import { reactive } from 'vue'
+const footerInfo = reactive([
+  {
+    aboutUs: 'About Us link to come ...',
+    contactUs: 'Contact Us link to come ...',
+  },
+])
+</script>
 
 <style scoped>
 header {
