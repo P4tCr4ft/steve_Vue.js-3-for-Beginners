@@ -15,8 +15,7 @@
   <div>
     <DataTable
       :value="products"
-      :reorderableColumns="true"
-      @column-reorder="onColReorder"
+      :reorderableColumns="false"
       @row-reorder="onRowReorder"
       tableStyle="min-width: 50rem"
     >
@@ -28,6 +27,21 @@
         :key="col.field"
       ></Column> -->
       <Column field="name" header="Name" />
+      <Column header="Active">
+        <template #body="{ data }">
+          <ToggleSwitch
+            v-if="data"
+            :model-value="!data.active"
+            :pt="{
+              slider: ({ context }) => [{ 'myslider-on': context.checked }],
+              // slider: {
+              //   class: 'sliderToggleClass',
+              //   style: 'border: 1px solid red; background-color: purple',
+              // },
+            }"
+          ></ToggleSwitch>
+        </template>
+      </Column>
       <Column :row-reorder="true">
         <template #body="{ data }">
           <!-- <template #rowreordericon> -->
@@ -60,6 +74,7 @@
 <script setup lang="ts">
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
+import ToggleSwitch from 'primevue/toggleswitch'
 // import ColumnGroup from 'primevue/columngroup' // optional
 // import Row from 'primevue/row' // optional
 import InputText from 'primevue/inputtext'
@@ -107,9 +122,9 @@ const columns = ref([
   { field: 'layerId', header: 'Layer ID' },
   { field: 'active', header: 'Active' },
 ])
-const onColReorder = () => {
-  toast.add({ severity: 'success', summary: 'Column Reordered', life: 3000 })
-}
+// const onColReorder = () => {
+//   toast.add({ severity: 'success', summary: 'Column Reordered', life: 3000 })
+// }
 const onRowReorder = (event) => {
   products.value = event.value
   toast.add({ severity: 'success', summary: 'Rows Reordered', life: 3000 })
@@ -120,4 +135,9 @@ const selectRow = () => {
 }
 </script>
 
-<style></style>
+<style>
+.myslider-on {
+  border: 1px solid red;
+  background-color: purple;
+}
+</style>

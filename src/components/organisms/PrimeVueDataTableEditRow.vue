@@ -21,9 +21,9 @@
         </template>
       </Column>
       <Column field="description" header="Description" style="width: 20%">
-        <template #editor="{ data, field }">
+        <!-- <template #editor="{ data, field }">
           <InputText v-model="data[field]" fluid />
-        </template>
+        </template> -->
       </Column>
       <Column field="active" header="Active" style="width: 20%">
         <template #editor="{ data, field }">
