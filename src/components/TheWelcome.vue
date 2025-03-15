@@ -11,11 +11,14 @@
     :avatarSrc="posts[1].avatarSrc"
     :post="posts[1].post"
   ></SocialPost>
+  <TheButton value="Some Post" />
+  <TheButton value="Some Dark Post" theme="dark" width="200px" />
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
 import SocialPost from './molecules/SocialPost.vue'
+import TheButton from './atoms/TheButton.vue'
 const posts = reactive([
   {
     username: 'user 1',
