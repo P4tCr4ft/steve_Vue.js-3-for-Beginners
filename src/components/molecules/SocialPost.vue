@@ -6,10 +6,15 @@
       <div class="userId">{{ userId }}</div>
     </div>
     <div class="post">{{ post }}</div>
-    <button v-if="comments" v-show="comments.length > 0" @click="showComments = true">
+    <button v-if="comments" v-show="comments.length > 0" @click="showComments = !showComments">
       Show Comments
     </button>
     <SocialPostComments v-if="showComments" :comments="comments" />
+    <div v-if="tags">
+      <div v-for="(tag, index) in tags" :key="index">
+        {{ tag }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,10 +29,12 @@ const props = defineProps({
   avatarSrc: String,
   post: String,
   comments: Array,
+  tags: Array,
 })
 
 onMounted(() => {
-  console.log(props.comments)
+  console.log(`Comments: ${props.comments}`)
+  console.log(`Username: ${props.username}`)
 })
 </script>
 

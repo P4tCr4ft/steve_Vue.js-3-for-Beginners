@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <p>Comments:</p>
-    <div>List of comments here</div>
+  <div v-for="(comment, index) in comments" :key="index">
+    {{ comment }}
   </div>
 </template>
 

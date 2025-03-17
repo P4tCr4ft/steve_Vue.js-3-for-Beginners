@@ -1,7 +1,7 @@
 <template>
   <TheHeader />
 
-  <PrimeVueExample />
+  <!-- <PrimeVueExample /> -->
 
   <!-- <PrimeVueDataTableEditRow /> -->
 
@@ -17,7 +17,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import TheHeader from './components/organisms/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 import { reactive } from 'vue'
-import PrimeVueExample from './components/organisms/PrimeVueExample.vue'
+// import PrimeVueExample from './components/molecules/PrimeVueExample.vue'
 // import PrimeVueDataTableEditRow from './components/organisms/PrimeVueDataTableEditRow.vue'
 
 const footerInfo = reactive([
