@@ -5,6 +5,10 @@
 
   <!-- <PrimeVueDataTableEditRow /> -->
 
+  <!-- <PrimeVuePopover /> -->
+
+  <PrimeVuePopoeverCompAPI />
+
   <RouterView />
 
   <footer>
@@ -17,6 +21,8 @@ import { RouterLink, RouterView } from 'vue-router'
 import TheHeader from './components/organisms/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 import { reactive } from 'vue'
+import PrimeVuePopoeverCompAPI from './components/molecules/PrimeVuePopoeverCompAPI.vue'
+// import PrimeVuePopover from './components/molecules/PrimeVuePopover.vue'
 // import PrimeVueExample from './components/molecules/PrimeVueExample.vue'
 // import PrimeVueDataTableEditRow from './components/organisms/PrimeVueDataTableEditRow.vue'
 

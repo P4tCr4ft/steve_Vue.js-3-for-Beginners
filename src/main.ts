@@ -7,10 +7,16 @@ import PrimeVue from 'primevue/config'
 import Aura from '@primevue/themes/aura'
 import ToastService from 'primevue/toastservice'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+
 import App from './App.vue'
 import router from './router'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
-const app = createApp(App)
+library.add(fas)
+
+const app = createApp(App).component('font-awesome-icon', FontAwesomeIcon)
 
 app.use(PrimeVue, {
   theme: {
