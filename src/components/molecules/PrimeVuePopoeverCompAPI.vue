@@ -1,11 +1,9 @@
 <template>
   <div class="card flex justify-center">
-    <FontAwesomeIcon icon="fa-solid fa-dog" />
-    <Button
-      type="button"
-      :label="selectedMember ? selectedMember.name : 'Select Member'"
-      @click="toggle"
-    />
+    <!-- <FontAwesomeIcon icon="fa-solid fa-dog" /> -->
+    <Button type="button" @click="toggle">
+      <FontAwesomeIcon icon="fa-solid fa-dog" />
+    </Button>
     <Popover ref="op">
       <div class="flex flex-col gap-4">
         <div>
