@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref } from 'vue'
+import { type Ref, ref } from 'vue'
 import Popover from 'primevue/popover'
 import Button from 'primevue/button'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
